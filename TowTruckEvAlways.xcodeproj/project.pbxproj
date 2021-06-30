@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F894B12E2670CE73003C936E /* TowTruckEvAlwaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F894B12D2670CE73003C936E /* TowTruckEvAlwaysApp.swift */; };
+		F894B1302670CE73003C936E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F894B12F2670CE73003C936E /* ContentView.swift */; };
+		F894B1322670CE74003C936E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F894B1312670CE74003C936E /* Assets.xcassets */; };
+		F894B1352670CE74003C936E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F894B1342670CE74003C936E /* Preview Assets.xcassets */; };
+		F894B1372670CE74003C936E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F894B1362670CE74003C936E /* Persistence.swift */; };
+		F894B13A2670CE74003C936E /* TowTruckEvAlways.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F894B1382670CE74003C936E /* TowTruckEvAlways.xcdatamodeld */; };
+		F894B1422670DFA3003C936E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F894B1412670DFA3003C936E /* LoginView.swift */; };
+		F894B14D2670E164003C936E /* Comfortaa-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F894B1442670E164003C936E /* Comfortaa-VariableFont_wght.ttf */; };
+		F894B14E2670E164003C936E /* Comfortaa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F894B1462670E164003C936E /* Comfortaa-Light.ttf */; };
+		F894B14F2670E164003C936E /* Comfortaa-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F894B1472670E164003C936E /* Comfortaa-SemiBold.ttf */; };
+		F894B1502670E164003C936E /* Comfortaa-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F894B1482670E164003C936E /* Comfortaa-Medium.ttf */; };
+		F894B1512670E164003C936E /* Comfortaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F894B1492670E164003C936E /* Comfortaa-Regular.ttf */; };
+		F894B1522670E164003C936E /* Comfortaa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F894B14A2670E164003C936E /* Comfortaa-Bold.ttf */; };
+		F894B1532670E164003C936E /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = F894B14B2670E164003C936E /* OFL.txt */; };
+		F894B1542670E164003C936E /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = F894B14C2670E164003C936E /* README.txt */; };
+		F894B1582670EAC4003C936E /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F894B1572670EAC4003C936E /* RegisterView.swift */; };
+		F894B15B2670F6C2003C936E /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = F894B15A2670F6C2003C936E /* SwiftUIX */; };
+		F894B15D2670FEA1003C936E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F894B15C2670FEA1003C936E /* GoogleService-Info.plist */; };
+		F894B160267116E5003C936E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F894B15F267116E5003C936E /* FirebaseAuth */; };
+		F894B16426715F15003C936E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F894B16326715F15003C936E /* MainView.swift */; };
+		F894B1662672140E003C936E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F894B1652672140E003C936E /* ProfileView.swift */; };
+		F8A6BD0D267BED9E009486C3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A6BD0C267BED9E009486C3 /* SettingsView.swift */; };
+		F8A6BD11267BFBB9009486C3 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A6BD10267BFBB9009486C3 /* HelpView.swift */; };
+		F8A6BD13267BFBF7009486C3 /* AboutUsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A6BD12267BFBF7009486C3 /* AboutUsView.swift */; };
+		F8A6BD17267C0CA1009486C3 /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A6BD16267C0CA1009486C3 /* OrdersView.swift */; };
+		F8AFFDCC26852B8D00757377 /* CalculatorForNoUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AFFDCB26852B8D00757377 /* CalculatorForNoUsers.swift */; };
+		F8AFFDCF268537F200757377 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AFFDCE268537F200757377 /* SwiftUIView.swift */; };
+		F8AFFE03268562A700757377 /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AFFE02268562A700757377 /* Landmark.swift */; };
+		F8AFFE05268562CD00757377 /* LandmarkAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AFFE04268562CD00757377 /* LandmarkAnnotation.swift */; };
+		F8AFFE072685631200757377 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AFFE062685631200757377 /* LocationManager.swift */; };
+		F8AFFE092685637A00757377 /* MapView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AFFE082685637A00757377 /* MapView1.swift */; };
+		F8AFFE0B268563C500757377 /* PlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AFFE0A268563C500757377 /* PlaceListView.swift */; };
+		F8AFFE0D268563FE00757377 /* ContentView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AFFE0C268563FE00757377 /* ContentView1.swift */; };
+		F8AFFE0F268576AE00757377 /* DriverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AFFE0E268576AE00757377 /* DriverView.swift */; };
+		F8FE2B332680D8EB006E7F40 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FE2B322680D8EB006E7F40 /* MapView.swift */; };
+		F8FE2B352680DA32006E7F40 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FE2B342680DA32006E7F40 /* MapViewModel.swift */; };
+		F8FE2B40268115AC006E7F40 /* PayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FE2B3F268115AC006E7F40 /* PayView.swift */; };
+		F8FE2B4326811F71006E7F40 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F8FE2B4226811F71006E7F40 /* FirebaseFirestore */; };
+		F8FE2B4526811F95006E7F40 /* FireStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FE2B4426811F95006E7F40 /* FireStoreManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F894B12A2670CE73003C936E /* TowTruckEvAlways.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TowTruckEvAlways.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F894B12D2670CE73003C936E /* TowTruckEvAlwaysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowTruckEvAlwaysApp.swift; sourceTree = "<group>"; };
+		F894B12F2670CE73003C936E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F894B1312670CE74003C936E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F894B1342670CE74003C936E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F894B1362670CE74003C936E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		F894B1392670CE74003C936E /* TowTruckEvAlways.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TowTruckEvAlways.xcdatamodel; sourceTree = "<group>"; };
+		F894B13B2670CE74003C936E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F894B1412670DFA3003C936E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F894B1442670E164003C936E /* Comfortaa-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		F894B1462670E164003C936E /* Comfortaa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Light.ttf"; sourceTree = "<group>"; };
+		F894B1472670E164003C936E /* Comfortaa-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-SemiBold.ttf"; sourceTree = "<group>"; };
+		F894B1482670E164003C936E /* Comfortaa-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Medium.ttf"; sourceTree = "<group>"; };
+		F894B1492670E164003C936E /* Comfortaa-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Regular.ttf"; sourceTree = "<group>"; };
+		F894B14A2670E164003C936E /* Comfortaa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Comfortaa-Bold.ttf"; sourceTree = "<group>"; };
+		F894B14B2670E164003C936E /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		F894B14C2670E164003C936E /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		F894B1572670EAC4003C936E /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		F894B15C2670FEA1003C936E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F894B16326715F15003C936E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		F894B1652672140E003C936E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		F8A6BD0C267BED9E009486C3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F8A6BD10267BFBB9009486C3 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		F8A6BD12267BFBF7009486C3 /* AboutUsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsView.swift; sourceTree = "<group>"; };
+		F8A6BD16267C0CA1009486C3 /* OrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersView.swift; sourceTree = "<group>"; };
+		F8AFFDCB26852B8D00757377 /* CalculatorForNoUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorForNoUsers.swift; sourceTree = "<group>"; };
+		F8AFFDCE268537F200757377 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		F8AFFE02268562A700757377 /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
+		F8AFFE04268562CD00757377 /* LandmarkAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkAnnotation.swift; sourceTree = "<group>"; };
+		F8AFFE062685631200757377 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		F8AFFE082685637A00757377 /* MapView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView1.swift; sourceTree = "<group>"; };
+		F8AFFE0A268563C500757377 /* PlaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListView.swift; sourceTree = "<group>"; };
+		F8AFFE0C268563FE00757377 /* ContentView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView1.swift; sourceTree = "<group>"; };
+		F8AFFE0E268576AE00757377 /* DriverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverView.swift; sourceTree = "<group>"; };
+		F8FE2B322680D8EB006E7F40 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		F8FE2B342680DA32006E7F40 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		F8FE2B3F268115AC006E7F40 /* PayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayView.swift; sourceTree = "<group>"; };
+		F8FE2B4426811F95006E7F40 /* FireStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F894B1272670CE73003C936E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F894B15B2670F6C2003C936E /* SwiftUIX in Frameworks */,
+				F894B160267116E5003C936E /* FirebaseAuth in Frameworks */,
+				F8FE2B4326811F71006E7F40 /* FirebaseFirestore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F894B1212670CE73003C936E = {
+			isa = PBXGroup;
+			children = (
+				F894B12C2670CE73003C936E /* TowTruckEvAlways */,
+				F894B12B2670CE73003C936E /* Products */,
+				F8FE2B4126811F71006E7F40 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F894B12B2670CE73003C936E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F894B12A2670CE73003C936E /* TowTruckEvAlways.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F894B12C2670CE73003C936E /* TowTruckEvAlways */ = {
+			isa = PBXGroup;
+			children = (
+				F894B12D2670CE73003C936E /* TowTruckEvAlwaysApp.swift */,
+				F8AFFE012685628A00757377 /* Models */,
+				F894B12F2670CE73003C936E /* ContentView.swift */,
+				F8FE2B4426811F95006E7F40 /* FireStoreManager.swift */,
+				F8A6BD1A267C1C52009486C3 /* RegLog */,
+				F8A6BD0C267BED9E009486C3 /* SettingsView.swift */,
+				F8FE2B3F268115AC006E7F40 /* PayView.swift */,
+				F894B16326715F15003C936E /* MainView.swift */,
+				F8AFFDCD26852B9B00757377 /* Map */,
+				F8FE2B342680DA32006E7F40 /* MapViewModel.swift */,
+				F8A6BD18267C1BE3009486C3 /* SettingsPages */,
+				F894B1312670CE74003C936E /* Assets.xcassets */,
+				F894B15C2670FEA1003C936E /* GoogleService-Info.plist */,
+				F894B1432670E164003C936E /* Comfortaa */,
+				F894B1362670CE74003C936E /* Persistence.swift */,
+				F894B13B2670CE74003C936E /* Info.plist */,
+				F894B1382670CE74003C936E /* TowTruckEvAlways.xcdatamodeld */,
+				F894B1332670CE74003C936E /* Preview Content */,
+			);
+			path = TowTruckEvAlways;
+			sourceTree = "<group>";
+		};
+		F894B1332670CE74003C936E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F894B1342670CE74003C936E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F894B1432670E164003C936E /* Comfortaa */ = {
+			isa = PBXGroup;
+			children = (
+				F894B1442670E164003C936E /* Comfortaa-VariableFont_wght.ttf */,
+				F894B1452670E164003C936E /* static */,
+				F894B14B2670E164003C936E /* OFL.txt */,
+				F894B14C2670E164003C936E /* README.txt */,
+			);
+			path = Comfortaa;
+			sourceTree = "<group>";
+		};
+		F894B1452670E164003C936E /* static */ = {
+			isa = PBXGroup;
+			children = (
+				F894B1462670E164003C936E /* Comfortaa-Light.ttf */,
+				F894B1472670E164003C936E /* Comfortaa-SemiBold.ttf */,
+				F894B1482670E164003C936E /* Comfortaa-Medium.ttf */,
+				F894B1492670E164003C936E /* Comfortaa-Regular.ttf */,
+				F894B14A2670E164003C936E /* Comfortaa-Bold.ttf */,
+			);
+			path = static;
+			sourceTree = "<group>";
+		};
+		F8A6BD18267C1BE3009486C3 /* SettingsPages */ = {
+			isa = PBXGroup;
+			children = (
+				F894B1652672140E003C936E /* ProfileView.swift */,
+				F8A6BD16267C0CA1009486C3 /* OrdersView.swift */,
+				F8AFFE0E268576AE00757377 /* DriverView.swift */,
+				F8A6BD10267BFBB9009486C3 /* HelpView.swift */,
+				F8A6BD12267BFBF7009486C3 /* AboutUsView.swift */,
+			);
+			path = SettingsPages;
+			sourceTree = "<group>";
+		};
+		F8A6BD1A267C1C52009486C3 /* RegLog */ = {
+			isa = PBXGroup;
+			children = (
+				F894B1572670EAC4003C936E /* RegisterView.swift */,
+				F894B1412670DFA3003C936E /* LoginView.swift */,
+			);
+			path = RegLog;
+			sourceTree = "<group>";
+		};
+		F8AFFDCD26852B9B00757377 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				F8FE2B322680D8EB006E7F40 /* MapView.swift */,
+				F8AFFDCB26852B8D00757377 /* CalculatorForNoUsers.swift */,
+				F8AFFDCE268537F200757377 /* SwiftUIView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		F8AFFE012685628A00757377 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F8AFFE02268562A700757377 /* Landmark.swift */,
+				F8AFFE04268562CD00757377 /* LandmarkAnnotation.swift */,
+				F8AFFE062685631200757377 /* LocationManager.swift */,
+				F8AFFE082685637A00757377 /* MapView1.swift */,
+				F8AFFE0A268563C500757377 /* PlaceListView.swift */,
+				F8AFFE0C268563FE00757377 /* ContentView1.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F8FE2B4126811F71006E7F40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F894B1292670CE73003C936E /* TowTruckEvAlways */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F894B13E2670CE74003C936E /* Build configuration list for PBXNativeTarget "TowTruckEvAlways" */;
+			buildPhases = (
+				F894B1262670CE73003C936E /* Sources */,
+				F894B1272670CE73003C936E /* Frameworks */,
+				F894B1282670CE73003C936E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TowTruckEvAlways;
+			packageProductDependencies = (
+				F894B15A2670F6C2003C936E /* SwiftUIX */,
+				F894B15F267116E5003C936E /* FirebaseAuth */,
+				F8FE2B4226811F71006E7F40 /* FirebaseFirestore */,
+			);
+			productName = TowTruckEvAlways;
+			productReference = F894B12A2670CE73003C936E /* TowTruckEvAlways.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F894B1222670CE73003C936E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					F894B1292670CE73003C936E = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = F894B1252670CE73003C936E /* Build configuration list for PBXProject "TowTruckEvAlways" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F894B1212670CE73003C936E;
+			packageReferences = (
+				F894B1592670F6C2003C936E /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+				F894B15E267116E5003C936E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = F894B12B2670CE73003C936E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F894B1292670CE73003C936E /* TowTruckEvAlways */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F894B1282670CE73003C936E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F894B1522670E164003C936E /* Comfortaa-Bold.ttf in Resources */,
+				F894B14F2670E164003C936E /* Comfortaa-SemiBold.ttf in Resources */,
+				F894B14E2670E164003C936E /* Comfortaa-Light.ttf in Resources */,
+				F894B1532670E164003C936E /* OFL.txt in Resources */,
+				F894B1542670E164003C936E /* README.txt in Resources */,
+				F894B1352670CE74003C936E /* Preview Assets.xcassets in Resources */,
+				F894B1512670E164003C936E /* Comfortaa-Regular.ttf in Resources */,
+				F894B14D2670E164003C936E /* Comfortaa-VariableFont_wght.ttf in Resources */,
+				F894B15D2670FEA1003C936E /* GoogleService-Info.plist in Resources */,
+				F894B1502670E164003C936E /* Comfortaa-Medium.ttf in Resources */,
+				F894B1322670CE74003C936E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F894B1262670CE73003C936E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F894B1662672140E003C936E /* ProfileView.swift in Sources */,
+				F894B13A2670CE74003C936E /* TowTruckEvAlways.xcdatamodeld in Sources */,
+				F8AFFDCF268537F200757377 /* SwiftUIView.swift in Sources */,
+				F8AFFE03268562A700757377 /* Landmark.swift in Sources */,
+				F894B16426715F15003C936E /* MainView.swift in Sources */,
+				F8AFFE092685637A00757377 /* MapView1.swift in Sources */,
+				F8FE2B40268115AC006E7F40 /* PayView.swift in Sources */,
+				F8AFFE0F268576AE00757377 /* DriverView.swift in Sources */,
+				F8A6BD0D267BED9E009486C3 /* SettingsView.swift in Sources */,
+				F8A6BD11267BFBB9009486C3 /* HelpView.swift in Sources */,
+				F894B1372670CE74003C936E /* Persistence.swift in Sources */,
+				F8AFFDCC26852B8D00757377 /* CalculatorForNoUsers.swift in Sources */,
+				F8FE2B332680D8EB006E7F40 /* MapView.swift in Sources */,
+				F8AFFE0D268563FE00757377 /* ContentView1.swift in Sources */,
+				F894B1302670CE73003C936E /* ContentView.swift in Sources */,
+				F8AFFE05268562CD00757377 /* LandmarkAnnotation.swift in Sources */,
+				F8AFFE0B268563C500757377 /* PlaceListView.swift in Sources */,
+				F8A6BD17267C0CA1009486C3 /* OrdersView.swift in Sources */,
+				F894B1582670EAC4003C936E /* RegisterView.swift in Sources */,
+				F8FE2B352680DA32006E7F40 /* MapViewModel.swift in Sources */,
+				F894B1422670DFA3003C936E /* LoginView.swift in Sources */,
+				F8AFFE072685631200757377 /* LocationManager.swift in Sources */,
+				F8A6BD13267BFBF7009486C3 /* AboutUsView.swift in Sources */,
+				F894B12E2670CE73003C936E /* TowTruckEvAlwaysApp.swift in Sources */,
+				F8FE2B4526811F95006E7F40 /* FireStoreManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F894B13C2670CE74003C936E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F894B13D2670CE74003C936E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F894B13F2670CE74003C936E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"TowTruckEvAlways/Preview Content\"";
+				DEVELOPMENT_TEAM = U3U85UCSA3;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TowTruckEvAlways/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DmitryKryukov.TowTruckEvAlways;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F894B1402670CE74003C936E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"TowTruckEvAlways/Preview Content\"";
+				DEVELOPMENT_TEAM = U3U85UCSA3;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TowTruckEvAlways/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = DmitryKryukov.TowTruckEvAlways;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F894B1252670CE73003C936E /* Build configuration list for PBXProject "TowTruckEvAlways" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F894B13C2670CE74003C936E /* Debug */,
+				F894B13D2670CE74003C936E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F894B13E2670CE74003C936E /* Build configuration list for PBXNativeTarget "TowTruckEvAlways" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F894B13F2670CE74003C936E /* Debug */,
+				F894B1402670CE74003C936E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F894B1592670F6C2003C936E /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.6;
+			};
+		};
+		F894B15E267116E5003C936E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F894B15A2670F6C2003C936E /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F894B1592670F6C2003C936E /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+		F894B15F267116E5003C936E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F894B15E267116E5003C936E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		F8FE2B4226811F71006E7F40 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F894B15E267116E5003C936E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		F894B1382670CE74003C936E /* TowTruckEvAlways.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F894B1392670CE74003C936E /* TowTruckEvAlways.xcdatamodel */,
+			);
+			currentVersion = F894B1392670CE74003C936E /* TowTruckEvAlways.xcdatamodel */;
+			path = TowTruckEvAlways.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F894B1222670CE73003C936E /* Project object */;
+}

@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Hi-Speed-wallpapers-Apple-Event-October-2020-i-Download-Blog-ispazio-i-Phone-blue-emanuele-esp.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
