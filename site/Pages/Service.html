@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<link rel="shortcut icon" href="../Favicon/Favicon32.png" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../CSS/ServiceStyle.css">
+	<link href="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
+
+	<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css" type="text/css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EvAlways</title>
+</head>
+<body>
+<!-- ************************************************** Горизонтальное меню ************************************************** -->
+<header>
+<nav class="TopMenu">
+	<ul>
+		<li class="Main"><a href="../Main.html">Главная</a></li>
+		<li class="Main"><a href="Service.html">Услуги</a></li>
+		<li class="Main"><a href="AboutUS.html">О нас</a></li>
+		<li><button id="login-button"><a>Войти</a></button></li>
+	</ul>
+</nav>
+</header>
+<!-- ************************************************* Первый блок страницы Услуг ************************************************* -->
+<section class="Block1">
+	<div class="ServiceTitle1">
+		<h1>Тарифы</h1>
+	</div>
+	<div class="ServiceGrid1">
+	<div class="ServiceTable">
+		<table border="1" cellpadding="5">
+			<tr>
+				<th>Тип ТС</th>
+				<th>Цена в рублях</th>
+			</tr>
+			<tr>
+				<td>Мотоциклы и квадроциклы</td>
+				<td>От 1199.9 ₽</td>
+			</tr> 
+			<tr>
+				<td>Легковые автомобили</td>
+				<td>От 1399.9 ₽</td>
+			</tr>
+			<tr>
+				<td>Автомобили бизнес класса и кроссоверы</td>
+				<td>От 1699.9 ₽</td>
+			</tr>
+			<tr>
+				<td>Внедорожникики и минивены</td>
+				<td>От 1999.9 ₽</td>
+			</tr>
+		</table>
+	</div>
+	</div>
+</section>
+<!-- ************************************************* Второй блок страницы Услуг ************************************************* -->
+<section class="Block2">
+	<div class="ServiceTitle2">
+		<h1>Расчет стоимости услуги</h1>
+		<p>Выберите адрес подачи и адрес прибытия</p>
+	</div>
+<!-- ************************************************* Карта Mapbox ************************************************* -->
+<div class="MapBox">
+		<div id='map' style='width: 1000px; height: 500px; border-radius: 35px;'><div id="instructions"></div></div>
+	<script>
+		mapboxgl.accessToken = 'pk.eyJ1IjoiZG1pdDEwMiIsImEiOiJja3BkN3NvbHMwOXJiMzBvOHRiYzFsODZmIn0.toNqMLSM5QLsYAd8wRG7VQ';
+		var map = new mapboxgl.Map({
+			container: 'map',
+			style: 'mapbox://styles/dmit102/ckoo15jer2c9917leq9ilo2td'
+		});
+
+
+var directions = new MapboxDirections({
+  accessToken: mapboxgl.accessToken,
+  unit: 'metric',
+  profile: 'mapbox/driving',
+  language: 'ru',
+  overview: 'full',
+  annotations: 'distance',
+  annotations: 'maxspeed'
+});
+
+
+
+
+map.addControl(directions, 'top-left');
+
+// Initialize the geolocate control.
+var geolocate = new mapboxgl.GeolocateControl({
+  positionOptions: {
+      enableHighAccuracy: true
+  },
+  trackUserLocation: true
+});
+// Add the control to the map.
+map.addControl(geolocate);
+// Set an event listener that fires
+// when a geolocate event occurs.
+geolocate.on('geolocate', function() {
+  console.log('A geolocate event has occurred.')
+});
+
+
+var nav = new mapboxgl.NavigationControl();
+map.addControl(nav, 'top-right');
+
+
+var scale = new mapboxgl.ScaleControl({
+    maxWidth: 80,
+    unit: 'imperial'
+});
+map.addControl(scale);
+
+scale.setUnit('metric');
+
+let api_response_string = fetch(directions_url);
+api_response_object = JSON.parse(api_response);
+console.log(api_response_object.routes[0].distance);
+
+	</script>
+	</div>
+	<div class="List">
+			<div class="WheelsBlocked">
+				<h1>Выберите количество заблокированных колес</h1>
+				<form action="">
+					<select id="SelectedWheelsBlocked">
+						<option value="0">0 Колес</option>
+						<option value="399.5">1 Колесо</option>
+						<option value="799.0">2 Колеса</option>
+						<option value="1198.5">3 Колеса</option>
+						<option value="1598.0">4 Колеса</option>
+					</select>
+				</form>
+			</div>
+			<div class="VehicleType">
+				<h1>Выберите тип транспортного средства</h1>
+				<form>
+					<select id="SelectedVehicleType">
+						<option value="1199.9">Мотоцикл или квадроцикл</option>
+						<option value="1399.9">Легковой автомобиль</option>
+						<option value="1699.9">Автомобиль бизнес класса или кроссовер</option>
+						<option value="1999.9">Внедорожникик или минивен</option>
+					</select>
+				</form>
+			</div>
+			<div class="Cost">
+				<h1 id="CostService">Итог:</h1>
+				<button id="ButtonCost" onclick="Cost()">Рассчитать стоимость</button>
+			</div>
+		</div>
+</section>
+<!-- ************************************************* Функция калькулятора ************************************************* -->
+<script>
+	function Cost() {
+		var SelectedWheels = document.getElementById('SelectedWheelsBlocked').value;
+		var SelectedType = document.getElementById('SelectedVehicleType').value;
+		var cost =  parseFloat (SelectedWheels) + parseFloat (SelectedType);
+		document.getElementById("CostService").innerHTML = "Итог: " + cost.toFixed(2) + " ₽";
+	} 
+</script>
+<!-- ************************************************* Третий блок страницы Услуг ************************************************* -->
+<section class="Block3">
+	<div class="ServiceTitle3">
+		<h1>Мобильное приложение</h1>
+	</div>
+	<div class="ServiceGrid3">
+	<div class="TextBlock3">
+		<p>◎ Оплата через Apply Pay, банковскую карту и наличные<br>
+			◎ Отслеживание вашего  заказа<br>
+		◎ Просмотр истории и чеков по всем заказам</p>
+		<div class="AppStoreIMG">
+		<a href="https://apps.apple.com/ru/app/car-taxi-%D0%B2%D1%81%D0%B5-%D1%8D%D0%B2%D0%B0%D0%BA%D1%83%D0%B0%D1%82%D0%BE%D1%80%D1%8B/id1221296530" target="_blank"><img class="APPSTROE" src="../Images/PreOrderAPPSTORENOFONE.png" height="83.5" width="249.5"></a></div></div>
+		<div class="EvAlwaysAppIMG">
+		<img src="../Images/EvAlwaysApp1.png" height="696" width="460">
+	</div>
+	</div>
+</section>
+<!-- ************************************************* FireBase connect JS ************************************************* -->
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyB7mviBDm675TkBOwipw-d52tnlctxHMuE",
+    authDomain: "towtruckevalways.firebaseapp.com",
+    databaseURL: "https://towtruckevalways-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "towtruckevalways",
+    storageBucket: "towtruckevalways.appspot.com",
+    messagingSenderId: "46395070903",
+    appId: "1:46395070903:web:53fdd9dc05808b0671f032",
+    measurementId: "G-WP4RQ44XDD"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/9.0.0-beta.2/firebase-app-compat.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/9.0.0-beta.2/firebase-analytics-compat.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/9.0.0-beta.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0-beta.2/firebase-firestore-compat.js"></script>
+
+  <script>
+import firebase from "firebase/compat/app";
+
+const firebaseApp = firebase.initializeApp({ /* config */ });</script>
+<!-- ************************************************* Модальное окно Регистрации ************************************************* -->
+<div id="ModalReg" class="ModalReg">
+	<div class="ModalContentReg">
+  	<div class="CloseIcon"><span id="CloseIcon" class="material-icons">close</span></div>
+  	<h1 class="RegTitle">РЕГИСТРАЦИЯ</h1>
+  	<div class="ModalRegBlock1">
+  	<input class="ModalRegEmail" type="text" name="email" required placeholder="Email" maxlength="320">
+  	<input class="ModalRegPassword" type="password" name="password" placeholder="Пароль" maxlength="128">
+  	<input class="ModalRegConfirmPassword" type="password" name="password" placeholder="Подтвердите пароль" maxlength="128">
+  </div>
+  <div class="ModalRegBlock2">
+  <button id="ModalRegNextButton"><a>Далее</a></button><br>
+  <p class="ModalRegBlock2Text">Нажимая 'Далее', вы принимаете Условия использования и Политику конфеденциальности Сервиса</p>
+  </div>
+  <hr class="ModalRegDivider">
+  <div class="ModalRegBlock3">
+  <p class="ModalRegBlock3Text">Уже есть аккаунт?</p>
+  <a class="ModalRegLogButton">Войти</a>
+  </div>
+  </div>
+</div>
+<!-- ************************************************* Модальное окно Модальное окно Авторизации ************************************************* -->
+<div id="ModalLog" class="ModalLog">
+  <div class="ModalContentLog">
+  	<div class="CloseIconLog"><span id="CloseIcon" class="material-icons">close</span></div>
+  	<h1 class="LogTitle">АВТОРИЗАЦИЯ</h1>
+  	<div class="ModalLogBlock1">
+  	<input class="ModalLogEmail" type="text" name="email" required placeholder="Email" maxlength="320">
+  	<input class="ModalLogPassword" type="password" name="password" placeholder="Пароль" maxlength="128">
+  </div>
+  <div class="ModalLogBlock2">
+  <button id="ModalLogNextButton"><a>Войти</a></button>
+  </div>
+  <hr class="ModalRegDivider">
+  <div class="ModalLogBlock3">
+  <p class="ModalLogBlock2Text">Еще нет аккаунта?</p>
+  <a class="ModalLogRegButton">Регистрация</a>
+  </div>
+  </div>
+</div>
+<!-- ************************************************ Функция открытия и перехода модальных окон JS ************************************************ -->
+<script>
+var loginbutton = document.getElementById("login-button");
+var modalWindows = document.getElementById("ModalReg");
+var closeIcon = document.getElementsByClassName("CloseIcon")[0];
+var logintextclose = document.getElementsByClassName("ModalRegLogButton")[0];
+
+var modalWindowsLog = document.getElementById("ModalLog");
+var closeIconLog = document.getElementsByClassName("CloseIconLog")[0];
+var regtextclose = document.getElementsByClassName("ModalLogRegButton")[0];
+
+
+loginbutton.onclick = function() {
+  modalWindows.style.display = "block";
+}
+
+
+closeIcon.onclick = function() {
+  modalWindows.style.display = "none";
+}
+
+closeIconLog.onclick = function() {
+  modalWindowsLog.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modalWindows) {
+    modalWindows.style.display = "none";
+  }
+  else if (event.target == modalWindowsLog){
+  	modalWindowsLog.style.display = "none";
+  }
+}
+
+logintextclose.onclick = function() {
+  modalWindowsLog.style.display = "block";
+  modalWindows.style.display = "none";
+}
+
+regtextclose.onclick = function() {
+  modalWindows.style.display = "block";
+  modalWindowsLog.style.display = "none";
+}
+</script>
+<!-- ************************************************* Подвал страницы Услуг ************************************************* -->
+<footer>
+	<p><a href="">Условия пользования - Политика конфиденциальности</a></p><br>
+		<p>© 2019 - 2021 EvAlways</p>
+</footer>
+</body>
+</html>

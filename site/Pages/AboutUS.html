@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<link rel="shortcut icon" href="../Favicon/Favicon32.png" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../CSS/AboutUsStyle.css">
+	<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css' rel='stylesheet' />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EvAlways</title>
+</head>
+<body>
+<!-- ************************************************** Горизонтальное меню ************************************************** -->
+<header>
+<nav class="TopMenu">
+	<ul>
+		<li class="Main"><a href="../Main.html">Главная</a></li>
+		<li class="Main"><a href="Service.html">Услуги</a></li>
+		<li class="Main"><a href="AboutUS.html">О нас</a></li>
+		<li><button id="login-button"><a>Войти</a></button></li>
+	</ul>
+</nav>
+</header>
+<!-- ************************************************* Первый блок страницы контактов ************************************************* -->
+<section class="Block1">
+	<div class="AboutUsTitle1">
+		<h1>Контакты</h1>
+	</div>
+	<div class="AboutUsGrid1">
+		<div class="TextBlock1">
+		<p>Адрес:  Балашиха, улица 1 Мая, 11<br>
+			Время работы:  24/7<br>
+			Email:  dmit.kryukoff2013@yandex.ru<br>
+			Номер телефона:  +7(495)555-09-45, +7(925)675-80-15<br>
+		Контактное лицо:  Крюков Дмитрий</p>
+		<div>
+		<div id='map' style='width: 1000px; height: 500px; border-radius: 35px;'></div>
+	<script>
+		mapboxgl.accessToken = 'pk.eyJ1IjoiZG1pdDEwMiIsImEiOiJja3BkN3NvbHMwOXJiMzBvOHRiYzFsODZmIn0.toNqMLSM5QLsYAd8wRG7VQ';
+		var monument = [38.024638, 55.731138];
+		var map = new mapboxgl.Map({
+			container: 'map',
+			style: 'mapbox://styles/dmit102/ckoo15jer2c9917leq9ilo2td',
+			center: monument,
+			zoom: 15
+		});
+
+		var popup = new mapboxgl.Popup({ offset: 25 }).setText('EvAlways - сервис эвакуации автомобилей');
+
+		var el = document.createElement('div');
+		el.id = 'marker';
+
+		new mapboxgl.Marker(el)
+		.setLngLat(monument)
+		.setPopup(popup) // sets a popup on this marker
+		.addTo(map);
+
+
+		map.addControl(new mapboxgl.FullscreenControl());
+
+	</script>
+	</div>
+</div>
+	</div>
+<!-- ******************************************** Деление первого блока страницы контактов ******************************************** -->
+	<div class="AboutUsTitle2">
+		<h1>О нас</h1>
+	</div>
+	<div class="AboutUsGrid2">
+		<div class="TextBlock2">
+		<p>
+EvAlways работает с 2019 года. На данный момент у нас в Москве более 15 автомобилей. проводим экстренную эвакуацию в Москве.</p><p>На данный момент мы оказываем одну из самых дешевых услуг по эвакуации в Москве. Наши цены начинаются от 1200.99 рублей, средняя цена эвакуации 2000 - 3000 рублей.</p><p>Работая с нами, Вы можете быть уверены в качестве наших услуг.</p>
+	</div>
+	</div>
+</section>
+<!-- ************************************************* FireBase connect JS ************************************************* -->
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyB7mviBDm675TkBOwipw-d52tnlctxHMuE",
+    authDomain: "towtruckevalways.firebaseapp.com",
+    databaseURL: "https://towtruckevalways-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "towtruckevalways",
+    storageBucket: "towtruckevalways.appspot.com",
+    messagingSenderId: "46395070903",
+    appId: "1:46395070903:web:53fdd9dc05808b0671f032",
+    measurementId: "G-WP4RQ44XDD"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/9.0.0-beta.2/firebase-app-compat.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/9.0.0-beta.2/firebase-analytics-compat.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/9.0.0-beta.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0-beta.2/firebase-firestore-compat.js"></script>
+
+  <script>
+import firebase from "firebase/compat/app";
+
+const firebaseApp = firebase.initializeApp({ /* config */ });</script>
+<!-- ************************************************* Модальное окно Регистрации ************************************************* -->
+<div id="ModalReg" class="ModalReg">
+	<div class="ModalContentReg">
+  	<div class="CloseIcon"><span id="CloseIcon" class="material-icons">close</span></div>
+  	<h1 class="RegTitle">РЕГИСТРАЦИЯ</h1>
+  	<form>
+  	<div class="ModalRegBlock1">
+  	<input class="ModalRegEmail" type="text" name="email" required placeholder="Email" maxlength="320">
+  	<input class="ModalRegPassword" type="password" name="password" placeholder="Пароль" maxlength="128">
+  	<input class="ModalRegConfirmPassword" type="password" name="password" placeholder="Подтвердите пароль" maxlength="128">
+  </div>
+  <div class="ModalRegBlock2">
+  <button type="submit" id="ModalRegNextButton"><a>Далее</a></button><br>
+  <p class="ModalRegBlock2Text">Нажимая 'Далее', вы принимаете Условия использования и Политику конфеденциальности Сервиса</p>
+  </div>
+  </form>
+  <hr class="ModalRegDivider">
+  <div class="ModalRegBlock3">
+  <p class="ModalRegBlock3Text">Уже есть аккаунт?</p>
+  <a class="ModalRegLogButton">Войти</a>
+  </div>
+  </div>
+</div>
+<!-- ************************************************* Модальное окно Модальное окно Авторизации ************************************************* -->
+<div id="ModalLog" class="ModalLog">
+  <div class="ModalContentLog">
+  	<div class="CloseIconLog"><span id="CloseIcon" class="material-icons">close</span></div>
+  	<h1 class="LogTitle">АВТОРИЗАЦИЯ</h1>
+  	<div class="ModalLogBlock1">
+  	<input class="ModalLogEmail" type="text" name="email" required placeholder="Email" maxlength="320">
+  	<input class="ModalLogPassword" type="password" name="password" placeholder="Пароль" maxlength="128">
+  </div>
+  <div class="ModalLogBlock2">
+  <button id="ModalLogNextButton"><a>Войти</a></button>
+  </div>
+  <hr class="ModalRegDivider">
+  <div class="ModalLogBlock3">
+  <p class="ModalLogBlock2Text">Еще нет аккаунта?</p>
+  <a class="ModalLogRegButton">Регистрация</a>
+  </div>
+  </div>
+</div>
+<!-- ************************************************ Функция открытия и перехода модальных окон JS ************************************************ -->
+<script>
+var loginbutton = document.getElementById("login-button");
+var modalWindows = document.getElementById("ModalReg");
+var closeIcon = document.getElementsByClassName("CloseIcon")[0];
+var logintextclose = document.getElementsByClassName("ModalRegLogButton")[0];
+
+var modalWindowsLog = document.getElementById("ModalLog");
+var closeIconLog = document.getElementsByClassName("CloseIconLog")[0];
+var regtextclose = document.getElementsByClassName("ModalLogRegButton")[0];
+
+
+loginbutton.onclick = function() {
+  modalWindows.style.display = "block";
+}
+
+
+closeIcon.onclick = function() {
+  modalWindows.style.display = "none";
+}
+
+closeIconLog.onclick = function() {
+  modalWindowsLog.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modalWindows) {
+    modalWindows.style.display = "none";
+  }
+  else if (event.target == modalWindowsLog){
+  	modalWindowsLog.style.display = "none";
+  }
+}
+
+logintextclose.onclick = function() {
+  modalWindowsLog.style.display = "block";
+  modalWindows.style.display = "none";
+}
+
+regtextclose.onclick = function() {
+  modalWindows.style.display = "block";
+  modalWindowsLog.style.display = "none";
+}
+</script>
+<!-- ************************************************* Подвал страницы контактов ************************************************* -->
+<footer>
+	<p><a href="">Условия пользования - Политика конфиденциальности</a></p><br>
+		<p>© 2019 - 2021 EvAlways</p>
+</footer>
+</body>
+</html>

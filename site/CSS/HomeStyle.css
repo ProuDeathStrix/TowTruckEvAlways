@@ -1,0 +1,416 @@
+body{
+	min-width: 1920px;
+	margin: 0;
+	padding: 0;
+	font-family: 'Comfortaa',cursive;
+	background-color: #F5f5dc;
+}
+/* *************************************************  Иконки ************************************************* */
+.material-icons{
+	color: #F5f5dc;
+	font-size: 55px;
+}
+/* ************************************************* Модальное окно Регистрации ************************************************* */
+.ModalReg {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  /*overflow: auto; скролл  */
+  background-color: rgba(0,0,0,0.9);
+}
+.ModalContentReg {
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 24.3px 2.7px rgb(252, 105, 8);
+  margin: 15% auto; 
+  padding: 20px;
+  border-radius: 35px;
+  width: 24%;
+}
+#CloseIcon {
+  color: #F5f5dc;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+}
+#CloseIcon:hover,
+#CloseIcon:focus {
+  color: #FC6908FF;
+  text-decoration: none;
+  cursor: pointer;
+}
+.RegTitle{
+	color: #F5f5dc;
+	font-size: 35px;
+	text-align: center;
+}
+.ModalRegBlock1{
+	display: inline-block; 
+	padding: 5%;
+}
+.ModalRegEmail{
+	height: 45px;
+	width: 200px;
+	font-size: 45px;
+	font-family: 'Comfortaa',cursive;
+	border-radius: 12px;
+	width: 100%;
+	height: 100%;
+	background-color: #F5f5dc;
+	margin-bottom: 10%;
+}
+.ModalRegPassword{
+	height: 45px;
+	width: 200px;
+	font-size: 45px;
+	font-family: 'Comfortaa',cursive;
+	border-radius: 12px;
+	width: 100%;
+	height: 100%;
+	background-color: #F5f5dc;
+	margin-bottom: 10%;
+}
+.ModalRegConfirmPassword{
+	height: 45px;
+	width: 200px;
+	font-size: 45px;
+	font-family: 'Comfortaa',cursive;
+	border-radius: 12px;
+	width: 100%;
+	height: 100%;
+	background-color: #F5f5dc;
+}
+.ModalRegBlock2{
+	padding: 5%;
+}
+#ModalRegNextButton{
+	height: 45px;
+	width: 200px;
+	font-size: 45px;
+	font-family: 'Comfortaa',cursive;
+	border-radius: 12px;
+	width: 100%;
+	height: 100%;
+	background-color: #F5f5dc;
+	border-color: rgba(24, 24, 24, 1.0);
+	box-shadow: 0px 0px 24.3px 2.7px rgba(245, 245, 220, 0.5);
+}
+#ModalRegNextButton:hover {
+	border-color: #FC6908FF;
+  color: #FC6908FF;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 24.3px 2.7px rgb(252, 105, 8);
+  cursor: pointer;
+}
+.ModalRegBlock2Text{
+	font-size: 15px;
+	font-family: 'Comfortaa',cursive;
+	color: #F5f5dc;
+	text-align: center;
+	padding-top: 5%;
+	width: 100%;
+}
+hr.ModalRegDivider {
+  border-top: 1px #F5f5dc;
+}
+.ModalRegBlock3{
+	display: flex;
+	justify-content: space-around;
+	padding: 5%;
+}
+.ModalRegBlock3Text{
+	font-size: 15px;
+	font-family: 'Comfortaa',cursive;
+	color: #F5f5dc;
+	text-align: center;
+	padding-top: 5%;
+	width: 100%;
+}
+.ModalRegLogButton{
+	font-size: 45px;
+	font-family: 'Comfortaa',cursive;
+	border-radius: 12px;
+	width: 100%;
+	height: 100%;
+	background-color: #F5f5dc;
+	text-align: center;
+	border-color: rgba(24, 24, 24, 1.0);
+	box-shadow: 0px 0px 24.3px 2.7px rgba(245, 245, 220, 0.5);
+	margin-top: 5%;
+
+}
+.ModalRegLogButton:hover {
+  color: #FC6908FF;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 24.3px 2.7px rgb(252, 105, 8);
+  cursor: pointer;
+}
+/* ************************************************* Модальное окно Авторизации ************************************************* */
+.ModalLog {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  /*overflow: auto; скролл  */
+  background-color: rgba(0,0,0,0.9);
+}
+.ModalContentLog {
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 7px 24.3px 2.7px rgb(252, 105, 8);
+  margin: 15% auto; 
+  padding: 20px;
+  border-radius: 35px;
+  width: 24%;
+}
+.LogTitle{
+	color: #F5f5dc;
+	font-size: 35px;
+	text-align: center;
+}
+.ModalLogBlock1{
+	display: inline-block; 
+	padding: 5%;
+}
+.ModalLogEmail{
+	height: 45px;
+	width: 200px;
+	font-size: 45px;
+	font-family: 'Comfortaa',cursive;
+	border-radius: 12px;
+	width: 100%; /* Full width */
+	height: 100%;
+	background-color: #F5f5dc;
+	margin-bottom: 10%;
+}
+.ModalLogPassword{
+	height: 45px;
+	width: 200px;
+	font-size: 45px;
+	font-family: 'Comfortaa',cursive;
+	border-radius: 12px;
+	width: 100%; /* Full width */
+	height: 100%;
+	background-color: #F5f5dc;
+}
+.ModalLogBlock2{
+	padding: 5%;
+}
+#ModalLogNextButton{
+	height: 45px;
+	width: 200px;
+	font-size: 45px;
+	font-family: 'Comfortaa',cursive;
+	border-radius: 12px;
+	width: 100%;
+	height: 100%;
+	background-color: #F5f5dc;
+	border-color: rgba(24, 24, 24, 1.0);
+	box-shadow: 0px 0px 24.3px 2.7px rgba(245, 245, 220, 0.5);
+}
+#ModalLogNextButton:hover {
+  border-color: #FC6908FF;
+  color: #FC6908FF;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 24.3px 2.7px rgb(252, 105, 8);
+  cursor: pointer;
+}
+.ModalLogBlock3{
+	display: flex;
+	justify-content: space-around;
+	padding: 5%;
+}
+.ModalLogBlock2Text{
+	font-size: 15px;
+	font-family: 'Comfortaa',cursive;
+	color: #F5f5dc;
+	text-align: center;
+	padding-top: 5%;
+	width: 100%;
+}
+.ModalLogRegButton{
+	font-size: 45px;
+	font-family: 'Comfortaa',cursive;
+	border-radius: 12px;
+	width: 100%;
+	height: 100%;
+	background-color: #F5f5dc;
+	text-align: center;
+	margin-top: 5%;
+}
+.ModalLogRegButton:hover {
+  color: #FC6908FF;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 7px 24.3px 2.7px rgb(252, 105, 8);
+  cursor: pointer;
+}
+/* *************************************************  Горизонтальное меню ************************************************* */
+.TopMenu{
+	position: fixed;
+	background-color: rgba(24,24,24,1);
+	width: 100%;
+}
+.TopMenu ul{
+	text-align: center;
+}
+.TopMenu li{
+	display: inline-block;   
+}
+.TopMenu li a{
+	text-decoration: none;
+	color: #F5f5dc;
+	padding: 19px;
+	font-size: 30px;
+}
+.TopMenu li button{
+	border-radius: 12px;
+	background-color: #181818FF;
+	border-color: #F5f5dc;
+	cursor: pointer;
+}
+.Main a:hover{
+	color: #FC6908FF;
+}
+.TopMenu button:hover{
+    border: 2px solid #FC6908FF;
+}
+.TopMenu button a:hover{
+    color: #FC6908FF;
+}
+/* ************************************************* Первый блок главной страницы ************************************************* */
+.Block1{
+	margin: 0;
+	padding: 0;
+	padding-bottom: 5%;
+	background-image: url(../Images/Block1.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.HomeTitle1{
+	padding-top: 4%;
+	text-align: center;
+	font-size: 25px;
+	color: #F5f5dc;
+	padding-bottom: 1%;
+}
+.HomeGrid1{
+	display: flex;
+	justify-content: space-around;
+}
+.HomeCardBlock1{
+	color: #F5f5dc;
+	max-width: 360px;
+	text-align: center;
+	padding: 30px 0px 80px;
+	min-height: 375px;
+	background-color: rgba(0, 0, 0, .4);
+	border-radius: 35px;
+	box-shadow: 0px 7px 24.3px 2.7px rgba(245, 245, 220, 0.14);
+}
+div:hover .HomeCardBlock1{
+  box-shadow: 0px 7px 24.3px 2.7px rgb(252, 105, 8);
+}
+/* ************************************************* Второй блок главной страницы ************************************************* */
+.Block2{
+	margin: 0;
+	padding: 0;
+	background-color: #181818FF;
+	background-size: cover;
+	background-position: center;
+}
+.HomeTitle2{
+	padding:0;
+	margin: 0;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	text-align: center;
+	font-size: 25px;
+	color: #F5f5dc;
+}
+.HomeGrid2{
+	display: flex;
+	justify-content: space-around;
+	padding-bottom: 3%;
+}
+.HomeCardBlock2{
+	color: #F5f5dc;
+	max-width: 360px;
+	text-align: center;
+	min-height: 200px;
+	font-size: 30px;
+}
+/* ************************************************* Третий блок главной страницы ************************************************* */
+.Block3{
+	padding-bottom: 3%;
+	background-image: url(../Images/Block3-3.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.HomeTitle3{
+	padding-top: 1%;
+	padding-bottom: 1%;
+	text-align: center;
+	font-size: 25px;
+	color: #F5f5dc;
+}
+.HomeGrid3{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .4);
+	box-shadow: 0px 7px 24.3px 2.7px rgba(245, 245, 220, 0.14);
+}
+.TextBlock3{
+	color: #F5f5dc;
+	text-align: left;
+	font-size: 25px;
+	line-height: 2;
+	padding-top: 7%;
+	padding-bottom: 3%;
+	padding-left: 2%;
+	padding-right: 2%;
+	
+}
+.TextBlock3 a{
+	text-decoration: none;
+	font-size: 25px;
+	color: #F5f5dc;
+
+}
+.AppStoreIMG img{
+	background-color: #F5f5dc;
+	border-radius: 14px;
+}
+.AppStoreIMG img:hover{
+	background-color: #FC6908FF;
+	box-shadow: 0px 0px 24.3px 2.7px rgb(252, 105, 8);
+}
+.EvAlwaysAppIMG{
+	padding-top: 3%;
+}
+/* ************************************************* Подвал главной страницы ************************************************* */
+footer {
+	margin: 0;
+	padding: 0;
+	padding: 30px;
+	background-color: #181818FF;
+	text-align: center;
+}
+footer p {
+	margin: 0;
+	padding: 0;
+	font-size: 30px;
+	color: #F5f5dc;
+}
+footer a {
+	text-decoration: none; 
+	color: #F5f5dc;
+}
+footer a:hover{
+	color: #FC6908FF;
+}

@@ -1,0 +1,379 @@
+body{
+	min-width: 1920px;
+	margin: 0;
+	padding: 0;
+	font-family: 'Comfortaa',cursive;
+	background-color: #F5f5dc;
+}
+/* *************************************************  Иконки ************************************************* */
+.material-icons{
+	color: #F5f5dc;
+	font-size: 55px;
+}
+/* ************************************************* Модальное окно Регистрации ************************************************* */
+.ModalReg {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  /*overflow: auto; скролл  */
+  background-color: rgba(0,0,0,0.9);
+}
+.ModalContentReg {
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 7px 24.3px 2.7px rgb(252, 105, 8);
+  margin: 15% auto; 
+  padding: 20px;
+  border-radius: 35px;
+  width: 24%;
+}
+#CloseIcon {
+  color: #F5f5dc;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+#CloseIcon:hover,
+#CloseIcon:focus {
+  color: #FC6908FF;
+  text-decoration: none;
+  cursor: pointer;
+}
+.RegTitle{
+	color: #F5f5dc;
+	font-size: 35px;
+	text-align: center;
+}
+.ModalRegBlock1{
+	display: inline-block; 
+	padding: 5%;
+}
+.ModalRegEmail{
+	height: 45px;
+	width: 200px;
+	font-size: 45px;
+	font-family: 'Comfortaa',cursive;
+	border-radius: 12px;
+	width: 100%; /* Full width */
+	height: 100%;
+	background-color: #F5f5dc;
+	margin-bottom: 10%;
+}
+.ModalRegPassword{
+	height: 45px;
+	width: 200px;
+	font-size: 45px;
+	font-family: 'Comfortaa',cursive;
+	border-radius: 12px;
+	width: 100%; /* Full width */
+	height: 100%;
+	background-color: #F5f5dc;
+	margin-bottom: 10%;
+}
+.ModalRegConfirmPassword{
+	height: 45px;
+	width: 200px;
+	font-size: 45px;
+	font-family: 'Comfortaa',cursive;
+	border-radius: 12px;
+	width: 100%; /* Full width */
+	height: 100%;
+	background-color: #F5f5dc;
+}
+.ModalRegBlock2{
+	padding: 5%;
+}
+#ModalRegNextButton{
+	height: 45px;
+	width: 200px;
+	font-size: 45px;
+	font-family: 'Comfortaa',cursive;
+	border-radius: 12px;
+	width: 100%; /* Full width */
+	height: 100%;
+	background-color: #F5f5dc;
+}
+#ModalRegNextButton:hover {
+  color: #FC6908FF;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 7px 24.3px 2.7px rgb(252, 105, 8);
+  cursor: pointer;
+}
+.ModalRegBlock2Text{
+	font-size: 15px;
+	font-family: 'Comfortaa',cursive;
+	color: #F5f5dc;
+	text-align: center;
+	padding-top: 5%;
+	width: 100%;
+}
+hr.ModalRegDivider {
+  border-top: 1px #F5f5dc;
+}
+.ModalRegBlock3{
+	display: flex;
+	justify-content: space-around;
+	padding: 5%;
+}
+.ModalRegBlock3Text{
+	font-size: 15px;
+	font-family: 'Comfortaa',cursive;
+	color: #F5f5dc;
+	text-align: center;
+	padding-top: 5%;
+	width: 100%;
+}
+.ModalRegLogButton{
+	font-size: 45px;
+	font-family: 'Comfortaa',cursive;
+	border-radius: 12px;
+	width: 100%;
+	height: 100%;
+	background-color: #F5f5dc;
+	text-align: center;
+	margin-top: 5%;
+}
+.ModalRegLogButton:hover {
+  color: #FC6908FF;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 7px 24.3px 2.7px rgb(252, 105, 8);
+  cursor: pointer;
+}
+/* ************************************************* Модальное окно Авторизации ************************************************* */
+.ModalLog {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  /*overflow: auto; скролл  */
+  background-color: rgba(0,0,0,0.9);
+}
+.ModalContentLog {
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 7px 24.3px 2.7px rgb(252, 105, 8);
+  margin: 15% auto; 
+  padding: 20px;
+  border-radius: 35px;
+  width: 24%;
+}
+.LogTitle{
+	color: #F5f5dc;
+	font-size: 35px;
+	text-align: center;
+}
+.ModalLogBlock1{
+	display: inline-block; 
+	padding: 5%;
+}
+.ModalLogEmail{
+	height: 45px;
+	width: 200px;
+	font-size: 45px;
+	font-family: 'Comfortaa',cursive;
+	border-radius: 12px;
+	width: 100%; /* Full width */
+	height: 100%;
+	background-color: #F5f5dc;
+	margin-bottom: 10%;
+}
+.ModalLogPassword{
+	height: 45px;
+	width: 200px;
+	font-size: 45px;
+	font-family: 'Comfortaa',cursive;
+	border-radius: 12px;
+	width: 100%; /* Full width */
+	height: 100%;
+	background-color: #F5f5dc;
+}
+.ModalLogBlock2{
+	padding: 5%;
+}
+#ModalLogNextButton{
+	height: 45px;
+	width: 200px;
+	font-size: 45px;
+	font-family: 'Comfortaa',cursive;
+	border-radius: 12px;
+	width: 100%; /* Full width */
+	height: 100%;
+	background-color: #F5f5dc;
+}
+#ModalLogNextButton:hover {
+  color: #FC6908FF;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 7px 24.3px 2.7px rgb(252, 105, 8);
+  cursor: pointer;
+}
+.ModalLogBlock3{
+	display: flex;
+	justify-content: space-around;
+	padding: 5%;
+}
+.ModalLogBlock2Text{
+	font-size: 15px;
+	font-family: 'Comfortaa',cursive;
+	color: #F5f5dc;
+	text-align: center;
+	padding-top: 5%;
+	width: 100%;
+}
+.ModalLogRegButton{
+	font-size: 45px;
+	font-family: 'Comfortaa',cursive;
+	border-radius: 12px;
+	width: 100%;
+	height: 100%;
+	background-color: #F5f5dc;
+	text-align: center;
+	margin-top: 5%;
+}
+.ModalLogRegButton:hover {
+  color: #FC6908FF;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 7px 24.3px 2.7px rgb(252, 105, 8);
+  cursor: pointer;
+}
+/* *************************************************  Горизонтальное меню ************************************************* */
+.TopMenu{
+	position: fixed;
+	background-color: rgba(24,24,24,1);
+	width: 100%;
+}
+.TopMenu ul{
+	text-align: center;
+}
+.TopMenu li{
+	display: inline-block;   
+}
+.TopMenu li a{
+	text-decoration: none;
+	color: #F5f5dc;
+	padding: 19px;
+	font-size: 30px;
+}
+.TopMenu li button{
+	border-radius: 12px;
+	background-color: #181818FF;
+	border-color: #F5f5dc;
+}
+.Main a:hover{
+	color: #FC6908FF;
+}
+.TopMenu button:hover{
+    border: 2px solid #FC6908FF;
+}
+.TopMenu button a:hover{
+    color: #FC6908FF;
+}
+
+/* ************************************************* Первый блок страницы контактов ************************************************* */
+.Block1{
+	margin: 0;
+	padding: 0;
+	padding-bottom: 5%;
+	background-image: url(../Images/Contact.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.AboutUsTitle1{
+	padding-top: 4%;
+	text-align: center;
+	font-size: 25px;
+	color: #F5f5dc;
+	padding-bottom: 1%;
+}
+.AboutUsGrid1{
+	display: flex;
+	justify-content: space-around;
+}
+.TextBlock1{
+	color: #F5f5dc;
+	width: 1920px;
+	text-align: left;
+	font-size: 25px;
+	line-height: 3.5;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	padding-left: 2%;
+	padding-right: 2%;
+	background-color: rgba(0, 0, 0, .4);
+	border-radius: 35px;
+	box-shadow: 0px 7px 24.3px 2.7px rgba(245, 245, 220, 0.14);
+	display: flex;
+	justify-content: space-around;
+}
+div:hover .TextBlock1{
+  box-shadow: 0px 7px 24.3px 2.7px rgb(252, 105, 8);
+}
+#marker {
+background-image: url(../Images/Favicon64.png);
+background-size: cover;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+cursor: pointer;
+}
+ 
+.mapboxgl-popup {
+max-width: 200px;
+text-align: center;
+	font-size: 25px;
+	color: #F5f5dc;
+	font-family: 'Comfortaa',cursive;
+}
+div .mapboxgl-popup-content{
+	background-color: rgba(0, 0, 0, .4);
+	border-radius: 25px;
+}
+/* ************************************************* Деление первого блока страницы контактов ************************************************* */
+.AboutUsTitle2{
+	text-align: center;
+	font-size: 25px;
+	color: #F5f5dc;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+.AboutUsGrid2{
+	display: flex;
+	justify-content: center;
+}
+.TextBlock2{
+	width: 1920px;
+	color: #F5f5dc;
+	text-align: center;
+	font-size: 25px;
+	background-color: rgba(0, 0, 0, .4);
+	border-radius: 35px;
+	box-shadow: 0px 7px 24.3px 2.7px rgba(245, 245, 220, 0.14);
+}
+div:hover .TextBlock2{
+  box-shadow: 0px 7px 24.3px 2.7px rgb(252, 105, 8);
+}
+/* ************************************************* Подвал главной страницы ************************************************* */
+footer {
+	margin: 0;
+	padding: 0;
+	padding: 30px;
+	background-color: #181818FF;
+	text-align: center;
+}
+footer p {
+	margin: 0;
+	padding: 0;
+	font-size: 30px;
+	color: #F5f5dc;
+}
+footer a {
+	text-decoration: none; 
+	color: #F5f5dc;
+}
+footer a:hover{
+	color: #FC6908FF;
+}

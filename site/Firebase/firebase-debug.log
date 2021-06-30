@@ -1,0 +1,30 @@
+[debug] [2021-06-14T17:46:48.067Z] ----------------------------------------------------------------------
+[debug] [2021-06-14T17:46:48.068Z] Command:       /usr/local/bin/firebase /Users/deathstrix/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase init
+[debug] [2021-06-14T17:46:48.068Z] CLI Version:   9.12.1
+[debug] [2021-06-14T17:46:48.068Z] Platform:      darwin
+[debug] [2021-06-14T17:46:48.068Z] Node Version:  v12.18.1
+[debug] [2021-06-14T17:46:48.072Z] Time:          Mon Jun 14 2021 20:46:48 GMT+0300 (GMT+03:00)
+[debug] [2021-06-14T17:46:48.072Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-06-14T17:46:48.078Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-06-14T17:46:48.078Z] > authorizing via signed-in user (dmit10002@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/deathstrix/Desktop/Дипломная работа Крюков Дмитрий/Сайт/Firebase
+
+[debug] [2021-06-14T18:10:06.869Z] TypeError: Cannot read property 'setRawMode' of null
+    at ReadStream.setRawMode (tty.js:75:28)
+    at Interface._setRawMode (readline.js:290:16)
+    at Interface.close (readline.js:413:10)
+    at ReadStream.ontermend (readline.js:201:10)
+    at ReadStream.emit (events.js:327:22)
+    at ReadStream.EventEmitter.emit (domain.js:482:12)
+    at endReadableNT (_stream_readable.js:1221:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
